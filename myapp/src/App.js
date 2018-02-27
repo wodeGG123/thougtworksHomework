@@ -1,32 +1,55 @@
 import React, { Component } from 'react';
 import './App.scss';
-
-import {Grid, Row, Col, Tabs, Tab} from 'react-bootstrap'
+import { Tabs, Tab,} from 'react-bootstrap'
+import Agent from './common/agent'
+var FA = require('react-fontawesome')
 
 class App extends Component {
   render() {
     return (
       <div className="App">
          <div className="clearfix">
-            <div className="pull-right">
-                <member>
-                  Signed in as <a href="#">Member</a>
-                </member>
-                <out>
-                  <a href="#">Signed out</a>
-                </out>
+            <div className="top-bar pull-right">
+                <span className="member">
+                  Signed in as <a href="http://localhost:3000/">Member</a>
+                </span>
+                <span className="out">
+                  <span><FA name="arrow-right" /></span>
+                  <a href="http://localhost:3000/">Signed out</a>
+                </span>
             </div>
          </div>
 
-         <div>
-         <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
-            <Tab eventKey={1} title="Tab 1">
-              Tab 1 content
+         <div className="tab-wrap">
+           <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+            <Tab eventKey={1} title="HELP">
+              <div className="no-effects">
+                  <p>
+                    HELP
+                  </p>
+              </div>
             </Tab>
-            <Tab eventKey={2} title="Tab 2">
-              Tab 2 content
+            <Tab eventKey={2} title="AGENTS">
+              <Agent />
             </Tab>
-          </Tabs>
+            <Tab eventKey={3} title="MY CRUISE">
+               <div className="no-effects">
+                  <p>
+                    MY CRUISE
+                  </p>
+              </div>
+            </Tab>
+            <Tab eventKey={4} title="DASHBOARD">
+            <div className="no-effects">
+                  <p>
+                  DASHBOARD
+                  </p>
+              </div>
+            </Tab>
+           </Tabs>
+         </div>
+         <div className="app-bottom">
+            <p>Copyright: Toughtworks Inc.</p>
          </div>
       </div>
     );

@@ -1,4 +1,280 @@
+
+$borderColor:#232222;
+$titleUnderColor:#dadada;
 .App {
     min-width: 1024px;
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    .top-bar{
+        a{
+            color: #000000;
+            text-decoration: underline;
+        }
+        .member{
+            margin-right: 15px;
+        }
+        .out{
+            span{
+                margin-right: 1px;
+            }
+        }
+    }
+    .tab-wrap{
+        margin-top: 10px;
+        .nav-tabs > li{
+            float: right;
+            height: 28px;
+        }
+        .nav-tabs > li > a{
+            padding: 3px 15px;
+            border: 2px solid $borderColor;
+            border-bottom: none;
+            margin-right: 0;
+            margin-left: 4px;
+            border-radius: 10px 10px 0 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $borderColor;
+            position: relative;
+            outline: none;
+        }
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+            color: #f0eeeb;
+            background-color: #606060;
+            padding-bottom: 8px;
+            padding-top: 5px;
+            top: -5px;
+            
+        }
+        .tab-content{
+            border: 2px solid $borderColor;
+            .no-effects{
+                min-height: 500px;
+                p{
+                    font-size: 48px;
+                    text-align: center;
+                    color: #999999;
+                    line-height: 536px;
+                }
+            }
+            .tab-content-nav{
+                padding: 6px 15px;
+                background-color: #606060;
+                border-bottom: 2px solid $borderColor;
+                &>span{
+                    color: #f0eeeb;
+                }
+                &>button{
+                    margin-left: 10px;
+                    background-color: #999999;
+                    font-size: 12px;
+                    width: 64px;
+                    height: 22px;
+                    line-height: 20px;
+                    border-radius: 12px;
+                    font-weight: bold;
+                    border:1px solid #3c3b3b;
+                    &:hover, &.act{
+                        background-color: #dddddd;
+                    }                    
+                }
+            }
+
+            .tab-content-left{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 500px;
+                overflow: auto;
+                .add-pop{
+                    .add-pop-input{
+                        border:1px solid #a2a89d;
+                        background-color: #ffffff;
+                        input{
+                            width: 100%;
+                            font-size: 12px;
+                            height: 18px;
+                            border:none;
+                            box-shadow: none;
+                            background-color: #ffffff;
+                            text-indent: 5px;
+                            margin: 0;
+                        }
+                    }
+                    .add-pop-button{
+                        margin-top: 8px;
+                        button{
+                            background: -prefix-linear-zgradient(top, #ffffff, #cccccc); 
+                            background: linear-gradient(to bottom, #ffffff, #cccccc);
+                            height: 24px;
+                            border-radius: 12px;
+                            border:1px solid #000;
+                            margin-right: 10px;
+                            font-size: 12px;
+                        }                       
+                    }
+                }
+                .popover{
+                    border-radius: 15px;
+                    border:2px solid #232222;
+                    background-color: #e1edd5;
+                    .popover-title{
+                        border-radius: 15px 15px 0 0;
+                        background-color: #e1edd5;
+                    }
+                    .popover-content{
+                        padding: 2px 14px 9px;
+                    }
+                }
+                .popover.bottom{
+                    margin-top: 28px;
+                    width: 80%;
+                    max-width: 80%;
+                    margin-left: 14px;
+                    .arrow{
+                        top: -40px;
+                        border-width: 20px;
+                        margin-left: -11px;
+                        border-bottom-color: #232222;
+                        &:after{
+                            border-width: 19px;
+                            top: -17px;
+                            margin-left: -19px;
+                            border-bottom-color: #e1edd5;
+                        }
+                    }
+                }
+                .media{
+                    padding: 8px 15px;
+                    border:1px solid #444444;
+                    border-radius: 8px;
+                    background-color: #cde8b8;
+                    &.building{
+                        background-color: #fefbbd;
+                    }
+                    
+                    .media-left{
+                        img{
+                            border-radius:20px;
+                        }
+                    }
+                    .media-body{
+                        .media-body-top{
+                        b{
+                            margin-right: 15px;
+                        }
+                        span{
+                            color:#a6a79b;
+                            font{
+                                color:#142337;
+                                padding: 0 4px;
+                            }
+                        }
+                        }
+                        .media-body-bottom{
+                            margin-top: 2px;
+                            font-size: 12px;
+                            .media-body-bottom-add{
+                                b{
+                                    margin-right: 2px;
+                                }
+                                font{
+                                    text-decoration: underline;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            
+                            }
+                            .media-body-bottom-hr{
+                                color:#a6a79b;
+                                padding: 0 4px;
+                            }
+                            .media-body-bottom-items{
+                                font{
+                                    margin-right: 12px;
+                                }
+                                .fa{
+                                    color:#929292;
+                                    border:1px solid #929292;
+                                    border-radius: 5px;
+                                    padding: 0 2px;
+                                    margin-left: 2px;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .media-right{                    
+                        &>span{
+                            white-space: nowrap;
+                            position: relative;
+                            top: 20px;
+                            font{
+                                margin-left: 2px;
+                                text-decoration: underline;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tab-content-right{
+                border-left: 2px solid #505050;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 500px;
+                .tab-content-right-item{
+                    margin-bottom: 15px;
+                    h5{
+                        border-bottom: 2px solid $titleUnderColor;
+                        padding-bottom: 6px;
+                        margin: 0;
+                        font-weight: bold;
+                    }
+                    .row{
+                        height: 26px;
+                        line-height: 26px;
+                        .tab-content-right-item-col{
+                            padding: 0 4px;
+                        }
+                    }
+                    .history-div{
+                        max-height: 364px;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+    .app-bottom{
+        p{
+            font-size: 12px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+@media screen and (max-height:768px){
+    .App {
+        .tab-wrap .tab-content .tab-content-left{
+            height: 500px;
+        }
+        .tab-wrap .tab-content .tab-content-right{
+            height: 500px;
+        }
+    }
+}
+@media screen and (min-height:900px){
+    .App {
+        .tab-wrap .tab-content .tab-content-left{
+            height: 800px;
+        }
+        .tab-wrap .tab-content .tab-content-right{
+            height: 800px;
+        }
+    }
 }
