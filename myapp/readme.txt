@@ -10,8 +10,8 @@ react、react-bootstrap
 modules:
 create-react-app、lodash、react-fontawesome、sass
 
-entrence: ./src/index.js
-dev_commond: npm start
+entrance: ./src/index.js
+dev_command: npm start
 before development, we should first run npm install,
 second edit the node_modules/react-scripts/config/webpack.config.dev.js 
 add /.scss$/ at exclude
@@ -22,3 +22,5 @@ add {
 at loaders
 
 the same as node_modules/react-scripts/config/webpack.config.prod.js 
+
+if you want to build , just run npm run build
