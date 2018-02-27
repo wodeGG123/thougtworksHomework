@@ -24,3 +24,4 @@ at loaders
 the same as node_modules/react-scripts/config/webpack.config.prod.js 
 
 if you want to build , just run npm run build
+and open the build/index.html at a web service environment

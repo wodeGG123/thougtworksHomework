@@ -14,10 +14,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "mocha ./src/test/*.test.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6"
   }
