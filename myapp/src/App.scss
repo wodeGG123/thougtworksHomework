@@ -48,7 +48,7 @@ $titleUnderColor:#dadada;
         .tab-content{
             border: 2px solid $borderColor;
             .no-effects{
-                min-height: 500px;
+                height: 500px;
                 p{
                     font-size: 48px;
                     text-align: center;
@@ -260,21 +260,15 @@ $titleUnderColor:#dadada;
 
 @media screen and (max-height:768px){
     .App {
-        .tab-wrap .tab-content .tab-content-left{
-            height: 500px;
-        }
-        .tab-wrap .tab-content .tab-content-right{
+        .tab-wrap .tab-content .tab-content-left,.tab-wrap .tab-content .tab-content-right,.tab-wrap .tab-content .no-effects{
             height: 500px;
         }
     }
 }
 @media screen and (min-height:900px){
     .App {
-        .tab-wrap .tab-content .tab-content-left{
-            height: 800px;
-        }
-        .tab-wrap .tab-content .tab-content-right{
-            height: 800px;
+        .tab-wrap .tab-content .tab-content-left,.tab-wrap .tab-content .tab-content-right,.tab-wrap .tab-content .no-effects{
+            height: 750px;
         }
     }
 }
