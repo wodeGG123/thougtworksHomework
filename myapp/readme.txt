@@ -8,7 +8,7 @@ frames:
 react、react-bootstrap
 
 modules:
-create-react-app、lodash、react-fontawesome、sass
+create-react-app、lodash、react-fontawesome、sass、mocha、chai
 
 entrance: ./src/index.js
 dev_command: npm start
@@ -24,4 +24,5 @@ at loaders
 the same as node_modules/react-scripts/config/webpack.config.prod.js 
 
 if you want to build , just run npm run build
+if you want unit test , just run npm run test
 and open the build/index.html at a web service environment
